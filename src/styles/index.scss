@@ -1,0 +1,47 @@
+@import './variables';
+@import './home';
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: $main-color;
+  color: $main-font-color;
+  margin: 0;
+  height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.5;
+}
+
+.heading {
+  margin: 0;
+  font-weight: 400;
+}
+
+.lg-heading {
+  font-size: 6rem;
+  @extend .heading;
+}
+
+.sm-heading {
+  margin-bottom: 2rem;
+  padding: 0.2rem 1rem;
+  background: rgba(lighten($main-color, 2), 0.5);
+  @extend .heading;
+}
+
+a {
+  color: $main-font-color;
+  text-decoration: none;
+}
+
+.text-secondary {
+  color: $second-color;
+}
+
+.header {
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+}

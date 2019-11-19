@@ -1,0 +1,108 @@
+.menu__btn {
+  position: absolute;
+  top: 35px;
+  right: 35px;
+  cursor: pointer;
+  z-index: 3;
+  transition: 0.5s ease-out;
+
+  &-line {
+    width: 28px;
+    height: 3px;
+    background-color: $main-font-color;
+    margin-bottom: 5px;
+    transition: 0.5s ease-out;
+  }
+
+  &--close {
+    transform: rotate(180deg);
+  }
+
+  &--close>&-line {    
+    &:nth-child(1) {
+      transform: rotate(45deg) translate(5px,5px);
+    }
+
+    &:nth-child(2) {
+      opacity: 0;
+    }
+
+    &:nth-child(3) {
+      transform: rotate(-45deg) translate(7px,-6px);;
+    }
+  }
+}
+
+.menu__nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  display: flex;
+  opacity: 0.9;
+  visibility: hidden;
+
+  &-child {
+    display: flex;
+    flex-flow: column;
+    width: 50vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s ease-out;
+  }
+
+  &-img {
+    @extend .menu__nav-child;
+    background-color: $main-color;
+    transform: translateY(100%);
+
+    .portrait {
+      width: 250px;
+      height: 250px;
+      border: 3px solid $second-color;
+      border-radius: 50%;
+      // background: url();
+    }
+  }
+  
+  &-list {
+    @extend .menu__nav-child;
+    padding: 0;
+    transform: translateY(-100%);
+    background-color: darken($main-color, 5);
+    list-style: none;
+    
+    @for $i from 1 through 4 {
+      li:nth-child(#{$i}) {
+        display: flex;
+        transform: translateX(50vw);
+        transition: 0.5s ease-out 0.1s * $i;
+      }
+    }
+  }
+
+  &-item {
+    font-size: 2rem;
+    font-weight: 300;
+    padding: 1rem 0;
+    text-transform: uppercase;
+    // transition: 0.5s ease-out;
+  }
+  
+  &-item:hover {
+    color: $second-color;
+  }
+
+  &--show {
+    visibility: visible;
+    
+    .menu__nav-child {
+      transform: translateY(0);
+    }
+
+    .menu__nav-list li {
+      transform: translateX(0);
+    }
+  }
+}

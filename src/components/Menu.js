@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import { Link } from 'react-router-dom';
 
 const Menu = () => {
   const [showMenu, setMenuStatus] = useState(false);
@@ -12,10 +13,10 @@ const Menu = () => {
           <div className="portrait"></div>
         </div>
         <ul className="menu__nav-list">
-          <li><a href="" className="menu__nav-item">Home</a></li>
-          <li><a href="" className="menu__nav-item">About me</a></li>
-          <li><a href="" className="menu__nav-item">My work</a></li>
-          <li><a href="" className="menu__nav-item">How to reach me</a></li>
+          <li><Link to="/" className="menu__nav-item">Home</Link></li>
+          <li><Link to="/about" className="menu__nav-item">About me</Link></li>
+          <li><Link to="/work" className="menu__nav-item">My work</Link></li>
+          <li><Link to="/contacts" className="menu__nav-item">How to reach me</Link></li>
         </ul>
       </nav>
     </>

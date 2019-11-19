@@ -19,6 +19,10 @@ const Home = () => {
         <a href="" className="icon">
           <i className="fab fa-github fa-2x"></i>
         </a>
+
+        <a href="" className="icon">
+          <i class="fab fa-telegram-plane"></i>
+        </a>
       </div>
 
     </main>

@@ -34,6 +34,12 @@ module.exports = {
         'semi': [
             'error',
             'always'
-        ]
+        ],
+        'no-unused-vars': [
+            'error',
+            { 'vars': 'local', 'args': 'after-used', 'ignoreRestSiblings': false }
+        ],
+        'react/jsx-uses-react': 'error',
+        'react/jsx-uses-vars': 'error'
     }
 };

@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 const Menu = () => {
   const [showMenu, setMenuStatus] = useState(false);
@@ -13,10 +13,10 @@ const Menu = () => {
           <div className="portrait"></div>
         </div>
         <ul className="menu__nav-list">
-          <li><Link to="/" className="menu__nav-item">Home</Link></li>
-          <li><Link to="/about" className="menu__nav-item">About me</Link></li>
-          <li><Link to="/work" className="menu__nav-item">My work</Link></li>
-          <li><Link to="/contacts" className="menu__nav-item">How to reach me</Link></li>
+          <li><NavLink exact to="/" className="menu__nav-item">Home</NavLink></li>
+          <li><NavLink to="/about" className="menu__nav-item">About me</NavLink></li>
+          <li><NavLink to="/work" className="menu__nav-item">My work</NavLink></li>
+          <li><NavLink to="/contacts" className="menu__nav-item">How to reach me</NavLink></li>
         </ul>
       </nav>
     </>

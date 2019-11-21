@@ -39,7 +39,7 @@
   left: 0;
   width: 100vw;
   display: flex;
-  opacity: 0.9;
+  opacity: 0.98;
   visibility: hidden;
 
   &-child {
@@ -58,17 +58,23 @@
     transform: translateY(100%);
 
     .portrait {
-      width: 250px;
-      height: 250px;
-      border: 3px solid $second-color;
-      border-radius: 50%;
-      // background: url();
+      background: url('/portfolio/img/portrait/portrait-lg.jpg');
+      background-size: contain;
     }
+
+    // .portrait {
+    //   width: 250px;
+    //   height: 250px;
+    //   border: 3px solid $second-color;
+    //   border-radius: 50%;
+    //   background: url('/portfolio/img/portrait/portrait.jpg');
+    // }
   }
   
   &-list {
     @extend .menu__nav-child;
     padding: 0;
+    margin: 0;
     transform: translateY(-100%);
     background-color: darken($main-color, 5);
     list-style: none;

@@ -29,7 +29,6 @@
     &-img>.portrait {
       width: 150px;
       height: 150px;
-      // background: url();
     }
 
     &-child {
@@ -52,6 +51,16 @@
         transform: translateX(0);
       }
     }
+  }
+
+  .about__info {
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    'bioimg'
+    'bio'
+    'job1'
+    'job2'
+    'job3';
   }
 }
 

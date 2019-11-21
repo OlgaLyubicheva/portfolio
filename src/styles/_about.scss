@@ -1,0 +1,36 @@
+.about {
+  padding: 3rem;
+  height: 100%;
+
+  &__info {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
+    grid-template-areas: 
+    'bioimg bio bio'
+    'job1 job2 job3';
+    font-size: 16px;
+  }
+
+  &__bio-img {
+    grid-area: bioimg;
+    margin: auto;
+  }
+
+  &__bio-text {
+    grid-area: bio;
+    font-size: 1.5em;
+  }
+
+  &__jobs {
+    background: lighten($main-color, 5);
+    border-bottom: 5px solid $second-color;
+    padding: 8px;
+  }
+
+  @for $i from 3 through 5 {
+    &__jobs:nth-child(#{$i}) {
+      grid-area: job#{$i - 2};
+    }
+  }
+}

@@ -1,17 +1,9 @@
 import React from 'react';
+import Page from './Page';
 
 const AboutMe = () => {
   return (
-    <main className="about">
-      <h1 className="lg-heading">
-        About
-        <span className="text-secondary">Me</span>
-      </h1>
-
-      <h2 className="sm-heading">
-        Let me tell you a few things...
-      </h2>
-
+    <Page title='About Me' smTitle='Let me tell you a few things...'>
       <div className="about__info">
         <img
           src="img/portrait/portrait-lg.jpg"
@@ -28,36 +20,38 @@ const AboutMe = () => {
           </p>
         </div>
 
-        <div className="about__jobs">
-          <h3>Title 1</h3>
-          <p>
-            Lorem ipsum dolor sit, amet consectetur 
-            adipisicing elit. Reiciendis adipisci atque, 
-            eaque corrupti delectus non nihil iste cumque 
-            nobis provident.
-          </p>
-        </div>
-        <div className="about__jobs">
-          <h3>Title 1</h3>
-          <p>
-            Lorem ipsum dolor sit, amet consectetur 
-            adipisicing elit. Reiciendis adipisci atque, 
-            eaque corrupti delectus non nihil iste cumque 
-            nobis provident.
-          </p>
-        </div>
-        <div className="about__jobs">
-          <h3>Title 1</h3>
-          <p>
-            Lorem ipsum dolor sit, amet consectetur 
-            adipisicing elit. Reiciendis adipisci atque, 
-            eaque corrupti delectus non nihil iste cumque 
-            nobis provident.
-          </p>
-        </div>
+        <AboutMe.JobCard title='Title 1'>
+          Lorem ipsum dolor sit, amet consectetur 
+          adipisicing elit. Reiciendis adipisci atque, 
+          eaque corrupti delectus non nihil iste cumque 
+          nobis provident.
+        </AboutMe.JobCard>
+
+        <AboutMe.JobCard title='Title 1'>
+          Lorem ipsum dolor sit, amet consectetur 
+          adipisicing elit. Reiciendis adipisci atque, 
+          eaque corrupti delectus non nihil iste cumque 
+          nobis provident.
+        </AboutMe.JobCard>
+
+        <AboutMe.JobCard title='Title 1'>
+          Lorem ipsum dolor sit, amet consectetur 
+          adipisicing elit. Reiciendis adipisci atque, 
+          eaque corrupti delectus non nihil iste cumque 
+          nobis provident.
+        </AboutMe.JobCard>
       </div>
-    </main>
+    </Page>
   );
 };
+
+AboutMe.JobCard = ({ title, children }) => (
+  <div className="about__jobs">
+    <h3>{title}</h3>
+    <p>
+      {children}
+    </p>
+  </div>
+);
 
 export default AboutMe;

@@ -122,10 +122,6 @@
   transform: translateX(0);
 }
 
-.about {
-  padding: 3rem;
-  height: 100%;
-}
 .about__info {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -154,6 +150,69 @@
 }
 .about__jobs:nth-child(5) {
   grid-area: job3;
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 0.5rem;
+}
+.projects__item {
+  border: 2px solid transparent;
+}
+.projects__item:hover {
+  border-color: #84cded;
+}
+.projects__img {
+  position: relative;
+  width: 100%;
+  border: 1px solid #fff;
+  perspective: 1000px;
+}
+.projects__img:hover .projects__info {
+  transform: rotateY(360deg);
+}
+.projects__img img {
+  width: 100%;
+}
+.projects__info {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 0.5rem;
+  background-color: rgba(0, 0, 0, 0.6);
+  text-align: center;
+  backface-visibility: hidden;
+  transform: rotateY(180deg);
+  transform-style: preserve-3d;
+  transition: 1s ease-out;
+}
+
+.btn {
+  width: 100%;
+  height: 30px;
+  padding: 0.5rem 1rem;
+  margin-bottom: 0.3rem;
+  justify-content: center;
+  align-items: center;
+}
+.btn i {
+  margin-right: 10px;
+}
+.btn:hover {
+  background-color: #84cded;
+  color: #444;
+}
+
+.btn-light {
+  background-color: #c4c4c4;
+  color: #333;
+}
+
+.btn-dark {
+  background-color: black;
 }
 
 * {
@@ -187,7 +246,7 @@ body {
 }
 
 a {
-  display: inline-block;
+  display: inline-flex;
   color: #fff;
   text-decoration: none;
   transition: 0.5s ease-out;
@@ -210,6 +269,18 @@ a {
   border-radius: 50%;
 }
 
+.page {
+  padding: 3rem;
+  height: 100%;
+}
+
+@media (min-width: 1225px) {
+  .projects {
+    grid-template-columns: repeat(4, 1fr);
+    max-width: 1300px;
+    margin: 0 auto;
+  }
+}
 @media (max-width: 800px) {
   html {
     font-size: 13px;
@@ -252,6 +323,11 @@ a {
     grid-template-columns: 1fr;
     grid-template-areas: "bioimg" "bio" "job1" "job2" "job3";
   }
+
+  .projects {
+    grid-template-columns: repeat(2, 1fr);
+    font-size: 16px;
+  }
 }
 @media (max-width: 500px) {
   html {
@@ -260,6 +336,10 @@ a {
 
   .menu__nav-item {
     font-size: 24px;
+  }
+
+  .projects {
+    grid-template-columns: 1fr;
   }
 }
 

@@ -20,9 +20,9 @@ const Home = () => {
           <i className="fab fa-github fa-2x"></i>
         </a>
 
-        <a href="" className="icon">
+        {/* <a href="" className="icon">
           <i class="fab fa-telegram-plane"></i>
-        </a>
+        </a> */}
       </div>
 
     </main>

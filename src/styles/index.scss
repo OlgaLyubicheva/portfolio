@@ -2,6 +2,7 @@
 @import './home';
 @import './menu';
 @import './about';
+@import './work';
 
 * {
   box-sizing: border-box;
@@ -36,7 +37,7 @@ body {
 }
 
 a {
-  display: inline-block;
+  display: inline-flex;
   color: $main-font-color;
   text-decoration: none;
   transition: 0.5s ease-out;
@@ -57,6 +58,11 @@ a {
   height: 250px;
   border: 3px solid $second-color;
   border-radius: 50%;
+}
+
+.page {
+  padding: 3rem;
+  height: 100%;
 }
 
 @import './media';

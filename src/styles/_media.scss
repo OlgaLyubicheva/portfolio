@@ -1,6 +1,10 @@
 // xl
 @media (min-width: 1225px) {
-
+  .projects {
+    grid-template-columns: repeat(4, 1fr);
+    max-width: 1300px;
+    margin: 0 auto;
+  }
 };
 
 // lg
@@ -62,6 +66,11 @@
     'job2'
     'job3';
   }
+
+  .projects {
+    grid-template-columns: repeat(2, 1fr);
+    font-size: 16px;
+  }
 }
 
 // sm
@@ -72,5 +81,9 @@
 
   .menu__nav-item {
     font-size: 24px;
+  }
+
+  .projects {
+    grid-template-columns: 1fr;
   }
 }

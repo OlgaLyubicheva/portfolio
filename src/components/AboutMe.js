@@ -1,6 +1,27 @@
 import React from 'react';
 import Page from './Page';
 
+const blocks = [
+  {
+    title: 'Hard skills',
+    text: '❏ React, Redux, JavaScript\n\
+    ❏ CSS3, HTML5, Sass(SCSS)\n\
+    ❏ Git, NPM, Eslint\n\
+    ❏ Photoshop'
+  },
+  {
+    title: 'Education',
+    text: 'Donetsk National University\n\
+    Mathematics department (Specialization Information Technology)\n\
+    MA Degree'
+  },
+  {
+    title: 'Self- Education',
+    text: 'Freecodecamp (HTML, CSS, JavaScript)\n\
+    Learn.javascript.ru​ , ​ reactjs.org​ , ​ redux.js.org​ (JS, React\\Redux)'
+  }
+];
+
 const AboutMe = () => {
   return (
     <Page title='About Me' smTitle='Let me tell you a few things...'>
@@ -11,35 +32,30 @@ const AboutMe = () => {
           className="about__bio-img portrait"
         />
         <div className="about__bio-text">
-          <h3 className="text-secondary">BIO</h3>
-          <p>Lorem ipsum dolor sit amet consectetur 
-            adipisicing elit. Dolores optio nulla veniam 
-            officia sit, nobis ut voluptatibus sapiente, 
-            accusantium reiciendis porro vitae iusto recusandae 
-            excepturi non consequuntur esse eum vero?
+          <h3 className="text-secondary">
+            BIO
+            <a href="CV_Liubicheva O _np.pdf" download className="icon" title="Load CV in pdf">
+              <i class="fas fa-file-download"></i>
+            </a>
+          </h3>
+          
+          <p>A responsible, hardworking, careful and positive person, 
+            look for the position of Front-End developer and eager to 
+            be a part of the friendly team. I’m very motivated to grow up and
+            improve my skills as a developer. I well with HTML5&CSS3, JavaScript,
+            have some experience in creating adaptive layouts and working with React.js.
           </p>
         </div>
 
-        <AboutMe.JobCard title='Title 1'>
-          Lorem ipsum dolor sit, amet consectetur 
-          adipisicing elit. Reiciendis adipisci atque, 
-          eaque corrupti delectus non nihil iste cumque 
-          nobis provident.
-        </AboutMe.JobCard>
-
-        <AboutMe.JobCard title='Title 1'>
-          Lorem ipsum dolor sit, amet consectetur 
-          adipisicing elit. Reiciendis adipisci atque, 
-          eaque corrupti delectus non nihil iste cumque 
-          nobis provident.
-        </AboutMe.JobCard>
-
-        <AboutMe.JobCard title='Title 1'>
-          Lorem ipsum dolor sit, amet consectetur 
-          adipisicing elit. Reiciendis adipisci atque, 
-          eaque corrupti delectus non nihil iste cumque 
-          nobis provident.
-        </AboutMe.JobCard>
+        {
+          blocks.map(block => (
+            <AboutMe.JobCard title={block.title}>
+              {block.text.split('\n').map(item => (
+                <span>{item}</span>
+              ))}
+            </AboutMe.JobCard>
+          ))
+        }
       </div>
     </Page>
   );

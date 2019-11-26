@@ -12,17 +12,17 @@ const Home = () => {
         Front-end developer
       </h2>
       <div className="icons">
-        <a href="" className="icon">
+        <a href="https://www.linkedin.com/in/olga-lyubicheva-300984190/" className="icon">
           <i className="fab fa-linkedin fa-2x"></i>
         </a>
 
-        <a href="" className="icon">
+        <a href="https://github.com/OlgaLyubicheva" className="icon">
           <i className="fab fa-github fa-2x"></i>
         </a>
 
-        {/* <a href="" className="icon">
-          <i class="fab fa-telegram-plane"></i>
-        </a> */}
+        <a href="https://t.me/Insectum_San" className="icon">
+          <i class="fab fa-telegram-plane fa-2x"></i>
+        </a>
       </div>
 
     </main>

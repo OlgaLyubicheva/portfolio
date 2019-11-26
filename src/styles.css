@@ -8,14 +8,17 @@
 .home h1 {
   margin-top: 15vh;
 }
-.home .icons {
+
+.icons {
   font-size: 16px;
   margin-top: 1rem;
 }
-.home .icon {
+
+.icon {
   padding: 0.4rem;
 }
-.home .icon:hover {
+
+.icon:hover {
   color: #84cded;
 }
 
@@ -142,6 +145,9 @@
   border-bottom: 5px solid #84cded;
   padding: 8px;
 }
+.about__jobs p > span {
+  display: flex;
+}
 .about__jobs:nth-child(3) {
   grid-area: job1;
 }
@@ -213,6 +219,30 @@
 
 .btn-dark {
   background-color: black;
+}
+
+.boxes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 1rem;
+}
+.boxes .icons {
+  width: 100%;
+}
+.boxes__box {
+  font-size: 2rem;
+  border: 3px #fff solid;
+  padding: 1.5rem 2.5rem;
+  margin-bottom: 3rem;
+  transition: 0.5s ease-out;
+}
+.boxes__box:hover {
+  background-color: #84cded;
+}
+.boxes__box:hover span {
+  color: #444;
 }
 
 * {

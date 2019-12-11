@@ -34,7 +34,7 @@ const AboutMe = () => {
         <div className="about__bio-text">
           <h3 className="text-secondary">
             BIO
-            <a href="CV_Liubicheva O _np.pdf" download className="icon" title="Load CV in pdf">
+            <a href="CV_Liubicheva_O.pdf" download className="icon" title="Load CV in pdf">
               <i class="fas fa-file-download"></i>
             </a>
           </h3>

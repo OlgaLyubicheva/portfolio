@@ -147,6 +147,7 @@
 }
 .about__jobs p > span {
   display: flex;
+  text-align: left;
 }
 .about__jobs:nth-child(3) {
   grid-area: job1;

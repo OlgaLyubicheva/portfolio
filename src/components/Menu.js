@@ -13,10 +13,18 @@ const Menu = () => {
           <div className="portrait"></div>
         </div>
         <ul className="menu__nav-list">
-          <li><NavLink exact to="/" className="menu__nav-item">Home</NavLink></li>
-          <li><NavLink to="/about" className="menu__nav-item">About me</NavLink></li>
-          <li><NavLink to="/work" className="menu__nav-item">My work</NavLink></li>
-          <li><NavLink to="/contacts" className="menu__nav-item">How to reach me</NavLink></li>
+          <li onClick={() => setMenuStatus(!showMenu)}>
+            <NavLink exact to="/" className="menu__nav-item">Home</NavLink>
+          </li>
+          <li onClick={() => setMenuStatus(!showMenu)}>
+            <NavLink to="/about" className="menu__nav-item">About me</NavLink>
+          </li>
+          <li onClick={() => setMenuStatus(!showMenu)}>
+            <NavLink to="/work" className="menu__nav-item">My work</NavLink>
+          </li>
+          <li onClick={() => setMenuStatus(!showMenu)}>
+            <NavLink to="/contacts" className="menu__nav-item">How to reach me</NavLink>
+          </li>
         </ul>
       </nav>
     </>
